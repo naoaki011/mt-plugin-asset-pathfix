@@ -1,0 +1,25 @@
+name: Asset PathFix
+key: AssetPathFix
+id: AssetPathFix
+l10n_class: AssetPathFix::L10N
+version: 1.0
+author_name: naoaki.onozaki
+author_link: http://www.zelazny.mydns.jp/
+plugin_link: https://github.com/naoaki011/mt-plugin-asset-pathfix
+#doc_link: http://code.zelazny.mydns.jp/trac/myproject/wiki/MtPluginsAssetPathfix
+description: <__trans phrase="AssetPathFix allows you to flatten AssetPath/URl in %r and revert.">
+
+applications:
+    cms:
+        list_actions:
+            asset:
+                fix_path_tor:
+                    label: Path to %r
+                    code: $AssetPathFix::AssetPathFix::CMS::path_tor
+                    order: 310
+                    condition: $AssetPathFix::AssetPathFix::CMS::is_blog_context
+                fix_path_tofull:
+                    label: Flatten Path
+                    code: $AssetPathFix::AssetPathFix::CMS::flatten_path
+                    order: 311
+                    condition: $AssetPathFix::AssetPathFix::CMS::is_blog_context
