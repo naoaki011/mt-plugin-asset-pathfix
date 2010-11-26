@@ -2,7 +2,7 @@ name: Asset PathFix
 key: AssetPathFix
 id: AssetPathFix
 l10n_class: AssetPathFix::L10N
-version: 1.0
+version: 1.01
 author_name: naoaki.onozaki
 author_link: http://www.zelazny.mydns.jp/
 plugin_link: https://github.com/naoaki011/mt-plugin-asset-pathfix
@@ -22,4 +22,9 @@ applications:
                     label: Flatten Path
                     code: $AssetPathFix::AssetPathFix::CMS::flatten_path
                     order: 311
+                    condition: $AssetPathFix::AssetPathFix::CMS::is_blog_context
+                fix_url:
+                    label: Fix wrong URL
+                    code: $AssetPathFix::AssetPathFix::CMS::fix_url
+                    order: 312
                     condition: $AssetPathFix::AssetPathFix::CMS::is_blog_context

@@ -10,6 +10,7 @@ use vars qw( %Lexicon );
 	'AssetPathFix allows you to flatten AssetPath/URl in %r and revert.' => 'AssetPathFixは、DB内でアイテムURLとパスに設定されている「%r」を展開して保存しなおします。',
 	'Flatten Path' => 'ブログパスの展開',
 	'Path to %r' => 'ブログパスを「%r」に変更',
+	'Fix wrong URL' => '正しいURLに修正する',
 );
 
 1;
